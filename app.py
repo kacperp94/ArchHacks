@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Markup
 import numpy as np
 
-app = Flask(__name__, static_url_path='/templates')
+app = Flask(__name__)
 
 @app.route("/")
 
