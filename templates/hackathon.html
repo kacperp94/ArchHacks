@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js">
+
+
+
+// Code:
+
+/* 
+
+1: Admission Source
+2: Insulin
+3: Glyburide
+4: Glipizide
+5: Metformin
+6: Discharge Disposition
+7: HgA1C 
+
+*/
+</script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+<body>
+
+<h1>HACKATHON</h1>
+
+<div class="dropdown">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;"> Model </button>
+  </div>
+  <select style="width: -webkit-fill-available;" id="modelSelector" onchange="openParams()">
+    <option value="[5, 6, 8]">Readmission</option>
+    <option value="[6, 10, 11, 12]">Insulin Level</option>
+    <option value="[8, 9, 10, 11, 12]">Days Spent in Hospital</option>
+    <option value="[6, 9, 10, 11, 12]">HgA1C</option>
+  </select>
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class = "drops">
+
+<div class="dropdown" id="param1">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Race </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+  	<option disabled selected value> -- select an option -- </option>
+    <option value="Caucasian">Caucasian</option>
+    <option value="African American">African American</option>
+    <option value="Hispanic">Hispanic</option>
+    <option value="Asian">Asian</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param2">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Age </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="20-30">20-30</option>
+    <option value="30-40">30-40</option>
+    <option value="40-50">40-50</option>
+    <option value="50-60">50-60</option>
+    <option value="60-70">60-70</option>
+    <option value="70-80">70-80</option>
+    <option value="80-90">80-90</option>
+    <option value="90-100">90-100</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param3">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Gender </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param4">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Admission Type </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value=1>Emergency</option>
+    <option value=2>Urgent</option>
+    <option value=3>Elective</option>
+    <option value=6>Unknown or N/A</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param5">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Discharge Type </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value=1>Discharged to Home</option>
+    <option value=2>Discharged Transfer</option>
+    <option value=3>Unknown or N/A</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param6">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Admission Source ID </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value=1>Referral</option>
+    <option value=2>Transfer</option>
+    <option value=3>Emergency Room</option>
+    <option value=4>Unknown</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param7">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Days Spent in Hospital</button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value=1>1-2</option>
+    <option value=2>3-4</option>
+    <option value=3>5-14</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param8">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ HgA1C </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value=1>None</option>
+    <option value=2>Norm</option>
+    <option value=3>7-8</option>
+    <option value=4>>8</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param9">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Insulin </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="No">No</option>
+    <option value="Up">Up</option>
+    <option value="Steady">Steady</option>
+    <option value="Down">Down</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param10">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Glyburide </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="No">No</option>
+    <option value="Up">Up</option>
+    <option value="Steady">Steady</option>
+    <option value="Down">Down</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param11">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Glipizide </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="No">No</option>
+    <option value="Up">Up</option>
+    <option value="Steady">Steady</option>
+    <option value="Down">Down</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param12">
+  <div>
+  	<button type="button" style="width: -webkit-fill-available;">
+ Metaformin </button>
+  </div>
+  <select style="width: -webkit-fill-available;">
+
+
+    <option value="No">No</option>
+    <option value="Up">Up</option>
+    <option value="Steady">Steady</option>
+    <option value="Down">Down</option>
+  </select>
+</div>
+
+</div>
+
+</body>
+</html>
