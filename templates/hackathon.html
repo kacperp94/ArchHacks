@@ -68,9 +68,9 @@
   <select style="width: 200px" name = "race">
 
   	<option disabled selected value> -- select an option -- </option>
-    <option value="Caucasian">Caucasian</option>
-    <option value="African American">African American</option>
-    <option value="Other">Other</option>
+    <option value="race_Caucasian">Caucasian</option>
+    <option value="race_AfricanAmerican">African American</option>
+    <option value="race_Other">Other</option>
 
   </select>
 </div>
@@ -81,14 +81,14 @@
   </div>
   <select style="width: 200px" name = "age">
     <option disabled selected value> -- select an option -- </option>
-    <option value="20-30">20-30</option>
-    <option value="30-40">30-40</option>
-    <option value="40-50">40-50</option>
-    <option value="50-60">50-60</option>
-    <option value="60-70">60-70</option>
-    <option value="70-80">70-80</option>
-    <option value="80-90">80-90</option>
-    <option value="90-100">90-100</option>
+    <option value="age_[20-30)">20-30</option>
+    <option value="age_[30-40)">30-40</option>
+    <option value="age_[40-50)">40-50</option>
+    <option value="age_[50-60)">50-60</option>
+    <option value="age_[60-70)">60-70</option>
+    <option value="age_[70-80)">70-80</option>
+    <option value="age_[80-90)">80-90</option>
+    <option value="age_[90-100)">90-100</option>
   </select>
 </div>
 
@@ -99,8 +99,8 @@
   </div>
   <select style="width: 200px" name = "gender">
     <option disabled selected value> -- select an option -- </option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
+    <option value="gender_Male">Male</option>
+    <option value="gender_Female">Female</option>
   </select>
 </div>
 
@@ -112,10 +112,10 @@
   <select style="width: 200px" name="admission_type_id">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>Emergency</option>
-    <option value=2>Urgent</option>
-    <option value=3>Elective</option>
-    <option value=4>Unknown or N/A</option>
+    <option value="admission_type_id_1">Emergency</option>
+    <option value="admission_type_id_2">Urgent</option>
+    <option value="admission_type_id_3">Elective</option>
+    <option value="admission_type_id_4">Unknown or N/A</option>
   </select>
 </div>
 
@@ -127,9 +127,9 @@
   <select style="width: 200px" name = "discharge_disposition_id">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>Discharged to Home</option>
-    <option value=2>Discharged Transfer</option>
-    <option value=3>Unknown or N/A</option>
+    <option value="discharge_disposition_id_1">Discharged to Home</option>
+    <option value="discharge_disposition_id_2">Discharged Transfer</option>
+    <option value="discharge_disposition_id_3">Unknown or N/A</option>
   </select>
 </div>
 
@@ -141,10 +141,10 @@
   <select style="width: 200px" name = "admission_source_id">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>Referral</option>
-    <option value=2>Transfer</option>
-    <option value=3>Emergency Room</option>
-    <option value=4>Unknown</option>
+    <option value="admission_source_id_1">Referral</option>
+    <option value="admission_source_id_2">Transfer</option>
+    <option value="admission_source_id_3">Emergency Room</option>
+    <option value="admission_source_id_4">Unknown</option>
   </select>
 </div>
 
@@ -156,9 +156,9 @@
   <select style="width: 200px" name = "time_in_hospital">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>1-2</option>
-    <option value=2>3-4</option>
-    <option value=3>5-14</option>
+    <option value="time_in_hospital_1">1-2</option>
+    <option value="time_in_hospital_2">3-4</option>
+    <option value="time_in_hospital_3">5-14</option>
   </select>
 </div>
 
@@ -170,10 +170,10 @@
   <select style="width: 200px" name = "A1Cresult">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>None</option>
-    <option value=2>Norm</option>
-    <option value=3>7-8</option>
-    <option value=4>>8</option>
+    <option value="A1Cresult_None">None</option>
+    <option value="A1Cresult_Norm">Norm</option>
+    <option value="A1Cresult_>7">7-8</option>
+    <option value="A1Cresult_>8">>8</option>
   </select>
 </div>
 
@@ -185,10 +185,10 @@
   <select style="width: 200px"  name = "insulin">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value="No">No</option>
-    <option value="Up">Up</option>
-    <option value="Steady">Steady</option>
-    <option value="Down">Down</option>
+    <option value="insulin_No">No</option>
+    <option value="insulin_Up">Up</option>
+    <option value="insulin_Steady">Steady</option>
+    <option value="insulin_Down">Down</option>
   </select>
 </div>
 
@@ -200,10 +200,10 @@
   <select style="width: 200px" name = "glyburide">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value="No">No</option>
-    <option value="Up">Up</option>
-    <option value="Steady">Steady</option>
-    <option value="Down">Down</option>
+    <option value="glyburide_No">No</option>
+    <option value="glyburide_Up">Up</option>
+    <option value="glyburide_Steady">Steady</option>
+    <option value="glyburide_Down">Down</option>
   </select>
 </div>
 
@@ -215,10 +215,10 @@
   <select style="width: 200px" name = "glipizide">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value="No">No</option>
-    <option value="Up">Up</option>
-    <option value="Steady">Steady</option>
-    <option value="Down">Down</option>
+    <option value="glipizide_No">No</option>
+    <option value="glipizide_Up">Up</option>
+    <option value="glipizide_Steady">Steady</option>
+    <option value="glipizide_Down">Down</option>
   </select>
 </div>
 
@@ -230,10 +230,10 @@
   <select style="width: 200px" name = "metformin">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value="No">No</option>
-    <option value="Up">Up</option>
-    <option value="Steady">Steady</option>
-    <option value="Down">Down</option>
+    <option value="metformin_No">No</option>
+    <option value="metformin_Up">Up</option>
+    <option value="metformin_Steady">Steady</option>
+    <option value="metformin_Down">Down</option>
   </select>
 </div>
 
@@ -245,8 +245,8 @@
   <select style="width: 200px" name = "change">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=0>0</option>
-    <option value=1>1</option>
+    <option value="change_0">0</option>
+    <option value="change_1">1</option>
   </select>
 </div>
 
@@ -258,8 +258,8 @@
   <select style="width: 200px" name ="diabetesMed">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=0>0</option>
-    <option value=1>1</option>
+    <option value="diabetesMed_0">0</option>
+    <option value="diabetesMed_1">1</option>
   </select>
 </div>
 
@@ -274,9 +274,9 @@
   <select style="width: 200px" name = "diag_1">
 
     <option disabled selected value> -- select an option -- </option>
-    <option value=1>1</option>
-    <option value=2>2</option>
-    <option value=3>3</option>
+    <option value="diag_1_1">1</option>
+    <option value="diag_1_2">2</option>
+    <option value="diag_1_3">3</option>
   </select>
 </div>
 
