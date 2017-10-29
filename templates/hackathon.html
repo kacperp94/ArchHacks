@@ -30,30 +30,15 @@
 
 <style type="text/css">
   .dropdown {
-    display: none;
-  }
-  .submitButtonClass {
-    display: none;
+    width: 33%;
+    padding-left: 11.3%;
+    padding-bottom: 50px;
   }
 </style>
 
-<body>
+<body style="background-color: antiquewhite;">
 
-<h1>HACKATHON</h1>
-
-<div class="dropdown1">
-  <div>
-  	<button type="button" style="width: 200px;"> Model </button>
-  </div>
-  <select style="width: 200px" id="modelSelector" onchange="openParams()">
-    <option disabled selected value> -- select an option -- </option>
-    <option value="[1, 2, 3, 4, 5, 6, 8, 13, 14, 15, 16, 17]">Readmission</option>
-    <option value="[1, 2, 3, 4, 6, 10, 11, 12, 17]">Insulin Level</option>
-    <option value="[1, 2, 3, 4, 8, 9, 10, 11, 12, 17]">Days Spent in Hospital</option>
-    <option value="[1, 2, 3, 4, 6, 9, 10, 11, 12, 17]">HgA1C</option>
-  </select>
-
-</div>
+<h1 style="text-align: -moz-center;">HACKATHON</h1>
 
 <br>
 <br>
@@ -151,7 +136,7 @@
 <div class="dropdown" id="param7">
   <div>
   	<button type="button" style="width: 200px">
- Days Spent in Hospital</button>
+ Days in Hospital</button>
   </div>
   <select style="width: 200px" name = "time_in_hospital">
 
@@ -253,7 +238,7 @@
 <div class="dropdown" id="param14">
   <div>
   	<button type="button" style="width: 200px">
- Prescribed Diabetes Medication? </button>
+ Given Medication? </button>
   </div>
   <select style="width: 200px" name ="diabetesMed">
 
@@ -283,8 +268,8 @@
 <br>
 <br>
 
-<div class="dropdown" id="param16">
-  <input type="submit" value="Submit">
+<div id="param16">
+  <input type="submit" value="Submit" style="background-color: aquamarine; width:30%; margin-left:35%;">
 </div>
 
 </form>
