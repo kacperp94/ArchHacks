@@ -42,6 +42,7 @@ var app = {
 
 function openParams() {
 
+  
   var params = JSON.parse(document.getElementById("modelSelector").value);
   // console.log(params);
   // console.log(JSON.parse(params));

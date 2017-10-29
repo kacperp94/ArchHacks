@@ -32,6 +32,9 @@
   .dropdown {
     display: none;
   }
+  .submitButtonClass {
+    display: none;
+  }
 </style>
 
 <body>
@@ -44,10 +47,10 @@
   </div>
   <select style="width: 200px" id="modelSelector" onchange="openParams()">
     <option disabled selected value> -- select an option -- </option>
-    <option value="[1, 2, 3, 4, 5, 6, 8]">Readmission</option>
-    <option value="[1, 2, 3, 4, 6, 10, 11, 12]">Insulin Level</option>
-    <option value="[1, 2, 3, 4, 8, 9, 10, 11, 12]">Days Spent in Hospital</option>
-    <option value="[1, 2, 3, 4, 6, 9, 10, 11, 12]">HgA1C</option>
+    <option value="[1, 2, 3, 4, 5, 6, 8, 13, 14, 15, 16, 17]">Readmission</option>
+    <option value="[1, 2, 3, 4, 6, 10, 11, 12, 17]">Insulin Level</option>
+    <option value="[1, 2, 3, 4, 8, 9, 10, 11, 12, 17]">Days Spent in Hospital</option>
+    <option value="[1, 2, 3, 4, 6, 9, 10, 11, 12, 17]">HgA1C</option>
   </select>
 
 </div>
@@ -56,7 +59,7 @@
 <br>
 <br>
 
-<div class = "drops">
+<form action="">
 
 <div class="dropdown" id="param1">
   <div>
@@ -236,7 +239,68 @@
   </select>
 </div>
 
+<div class="dropdown" id="param13">
+  <div>
+  	<button type="button" style="width: 200px">
+ Medication Change </button>
+  </div>
+  <select style="width: 200px">
+
+    <option disabled selected value> -- select an option -- </option>
+    <option value=0>0</option>
+    <option value=1>1</option>
+  </select>
 </div>
 
+<div class="dropdown" id="param14">
+  <div>
+  	<button type="button" style="width: 200px">
+ Prescribed Diabetes Medication? </button>
+  </div>
+  <select style="width: 200px">
+
+    <option disabled selected value> -- select an option -- </option>
+    <option value=0>0</option>
+    <option value=1>1</option>
+  </select>
+</div>
+
+
+<div class="dropdown" id="param15">
+  <div>
+  	<button type="button" style="width: 200px">
+ Time to readmission </button>
+  </div>
+  <select style="width: 200px">
+
+    <option disabled selected value> -- select an option -- </option>
+    <option value="NO">Not readmitted</option>
+    <option value="<30">More than 30 days</option>
+    <option value=">30">30 days or less</option>
+  </select>
+</div>
+
+<div class="dropdown" id="param16">
+  <div>
+  	<button type="button" style="width: 200px">
+ Primary diagnosis </button>
+  </div>
+  <select style="width: 200px">
+
+    <option disabled selected value> -- select an option -- </option>
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+  </select>
+</div>
+
+<br>
+<br>
+
+<div class="dropdown" id="param17">
+  <input type="submit" value="Submit">
+</div>
+
+</form>
 </body>
 </html>
