@@ -109,63 +109,63 @@ def get_delay():
         new_vector = np.zeros((1,54), dtype=np.int)
 
         try:
-            new_vector[d[result['race']]] = 1
+            new_vector[0][d[result['race']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['gender']]] = 1
+            new_vector[0][d[result['gender']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['age']]] = 1
+            new_vector[0][d[result['age']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['admission_type_id']]] = 1
+            new_vector[0][d[result['admission_type_id']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['discharge_disposition_id']]] = 1
+            new_vector[0][d[result['discharge_disposition_id']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['admission_source_id']]] = 1
+            new_vector[0][d[result['admission_source_id']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['time_in_hospital']]] = 1
+            new_vector[0][d[result['time_in_hospital']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['A1Cresult']]] = 1
+            new_vector[0][d[result['A1Cresult']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['metformin']]] = 1
+            new_vector[0][d[result['metformin']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['glipizide']]] = 1
+            new_vector[0][d[result['glipizide']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['glyburide']]] = 1
+            new_vector[0][d[result['glyburide']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['insulin']]] = 1
+            new_vector[0][d[result['insulin']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['change']]] = 1
+            new_vector[0][d[result['change']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['diabetesMed']]] = 1
+            new_vector[0][d[result['diabetesMed']]] = 1
         except:
             pass
         try:
-            new_vector[d[result['diag_1']]] = 1
+            new_vector[0][d[result['diag_1']]] = 1
         except:
             pass
 
