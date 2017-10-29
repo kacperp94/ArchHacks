@@ -22,7 +22,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -46,7 +46,7 @@ function openParams() {
   // console.log(params);
   // console.log(JSON.parse(params));
   // console.log(typeof(params));
-  for (i = 5; i <= 12; i++) {
+  for (i = 1; i <= 12; i++) {
     document.getElementById("param" + i).style.display = 'none';
   }
   for (i = 0; i < params.length; i++) {

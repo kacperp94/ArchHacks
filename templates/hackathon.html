@@ -12,7 +12,7 @@
 
 // Code:
 
-/* 
+/*
 
 1: Admission Source
 2: Insulin
@@ -20,7 +20,7 @@
 4: Glipizide
 5: Metformin
 6: Discharge Disposition
-7: HgA1C 
+7: HgA1C
 
 */
 </script>
@@ -28,19 +28,26 @@
     app.initialize();
 </script>
 
+<style type="text/css">
+  .dropdown {
+    display: none;
+  }
+</style>
+
 <body>
 
 <h1>HACKATHON</h1>
 
-<div class="dropdown">
+<div class="dropdown1">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;"> Model </button>
+  	<button type="button" style="width: 200px;"> Model </button>
   </div>
-  <select style="width: -webkit-fill-available;" id="modelSelector" onchange="openParams()">
-    <option value="[5, 6, 8]">Readmission</option>
-    <option value="[6, 10, 11, 12]">Insulin Level</option>
-    <option value="[8, 9, 10, 11, 12]">Days Spent in Hospital</option>
-    <option value="[6, 9, 10, 11, 12]">HgA1C</option>
+  <select style="width: 200px" id="modelSelector" onchange="openParams()">
+    <option disabled selected value> -- select an option -- </option>
+    <option value="[1, 2, 3, 4, 5, 6, 8]">Readmission</option>
+    <option value="[1, 2, 3, 4, 6, 10, 11, 12]">Insulin Level</option>
+    <option value="[1, 2, 3, 4, 8, 9, 10, 11, 12]">Days Spent in Hospital</option>
+    <option value="[1, 2, 3, 4, 6, 9, 10, 11, 12]">HgA1C</option>
   </select>
 
 </div>
@@ -53,10 +60,9 @@
 
 <div class="dropdown" id="param1">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
- Race </button>
+  	<button type="button" style="width: 200px"> Race </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
   	<option disabled selected value> -- select an option -- </option>
     <option value="Caucasian">Caucasian</option>
@@ -68,12 +74,11 @@
 
 <div class="dropdown" id="param2">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
- Age </button>
+  	<button type="button" style="width: 200px"> Age </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="20-30">20-30</option>
     <option value="30-40">30-40</option>
     <option value="40-50">40-50</option>
@@ -87,12 +92,12 @@
 
 <div class="dropdown" id="param3">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Gender </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
   </select>
@@ -100,12 +105,12 @@
 
 <div class="dropdown" id="param4">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Admission Type </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value=1>Emergency</option>
     <option value=2>Urgent</option>
     <option value=3>Elective</option>
@@ -115,12 +120,12 @@
 
 <div class="dropdown" id="param5">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Discharge Type </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value=1>Discharged to Home</option>
     <option value=2>Discharged Transfer</option>
     <option value=3>Unknown or N/A</option>
@@ -129,12 +134,12 @@
 
 <div class="dropdown" id="param6">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Admission Source ID </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value=1>Referral</option>
     <option value=2>Transfer</option>
     <option value=3>Emergency Room</option>
@@ -144,12 +149,12 @@
 
 <div class="dropdown" id="param7">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Days Spent in Hospital</button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value=1>1-2</option>
     <option value=2>3-4</option>
     <option value=3>5-14</option>
@@ -158,12 +163,12 @@
 
 <div class="dropdown" id="param8">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  HgA1C </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value=1>None</option>
     <option value=2>Norm</option>
     <option value=3>7-8</option>
@@ -173,12 +178,12 @@
 
 <div class="dropdown" id="param9">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Insulin </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
     <option value="Up">Up</option>
     <option value="Steady">Steady</option>
@@ -188,12 +193,12 @@
 
 <div class="dropdown" id="param10">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Glyburide </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
     <option value="Up">Up</option>
     <option value="Steady">Steady</option>
@@ -203,12 +208,12 @@
 
 <div class="dropdown" id="param11">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Glipizide </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
     <option value="Up">Up</option>
     <option value="Steady">Steady</option>
@@ -218,12 +223,12 @@
 
 <div class="dropdown" id="param12">
   <div>
-  	<button type="button" style="width: -webkit-fill-available;">
+  	<button type="button" style="width: 200px">
  Metaformin </button>
   </div>
-  <select style="width: -webkit-fill-available;">
+  <select style="width: 200px">
 
-
+    <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
     <option value="Up">Up</option>
     <option value="Steady">Steady</option>
