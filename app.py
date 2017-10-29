@@ -1,8 +1,33 @@
-from flask import Flask, render_template, Markup
+from flask import Flask, request, render_template, Markup
 import numpy as np
-#import tensorflow
+import tensorflow as tf
 
 app = Flask(__name__)
+
+def predict(vec):
+    x = tf.placeholder(tf.float32, shape=(None,54))
+    y = tf.placeholder(tf.float32,shape=(None,3))
+    with tf.Session() as sess:
+        parameters={}
+        sess.run(tf.global_variables_initializer())
+        saver = tf.train.import_meta_graph('model_final.meta')
+        saver.restore(sess,tf.train.latest_checkpoint('./'))
+        parameters['w1'] = sess.run('w1:0')
+        parameters['b1'] = sess.run('b1:0')
+        parameters['w2'] = sess.run('w2:0')
+        parameters['b2'] = sess.run('b2:0')
+        parameters['w3'] = sess.run('w3:0')
+        parameters['b3'] = sess.run('b3:0')
+    input_relu = tf.add(tf.matmul(x,parameters['w1']),parameters['b1'])
+    output_relu = tf.nn.relu(input_relu)
+    hidden_output = tf.add(tf.matmul(output_relu,parameters['w2']),parameters['b2'])
+    hidden_relu = tf.nn.relu(hidden_output)
+    scores = tf.add(tf.matmul(hidden_relu,parameters['w3']),parameters['b3'])
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+        sc = sess.run(scores,feed_dict={x:vec})
+        output = sess.run(tf.argmax(sc,1))
+    return(output)
 
 @app.route("/")
 
@@ -81,7 +106,7 @@ def get_delay():
         """
         #pkl_file = open('cat', 'rb')
         #index_dict = pickle.load(pkl_file)
-        new_vector = np.zeros(54, dtype=np.int)
+        new_vector = np.zeros((1,54), dtype=np.int)
 
         try:
             new_vector[d[result['race']]] = 1
@@ -147,9 +172,15 @@ def get_delay():
 
         #pkl_file = open('logmodel.pkl', 'rb')
         #logmodel = pickle.load(pkl_file)
-        prediction = logmodel.predict(new_vector)
-
-        return render_template('results.html', prediction=prediction)
+        prediction = predict(new_vector)[0]
+        str = ''
+        if(prediction == 0):
+            str = "Expected readmission within 30 days"
+        if(prediction == 1):
+            str = "Expected readmission after 30 days"
+        if(prediction == 2):
+            str = "No expected readmission"
+        return render_template('results.html', prediction=str)
 
 if __name__ == "__main__":
     app.run()
