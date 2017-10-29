@@ -88,7 +88,7 @@ def get_delay():
         except:
             pass
         try:
-            new_vector[d[result['gender']] = 1
+            new_vector[d[result['gender']]] = 1
         except:
             pass
         try:
