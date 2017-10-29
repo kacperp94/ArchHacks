@@ -65,13 +65,13 @@
   <div>
   	<button type="button" style="width: 200px"> Race </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "race">
 
   	<option disabled selected value> -- select an option -- </option>
     <option value="Caucasian">Caucasian</option>
     <option value="African American">African American</option>
-    <option value="Hispanic">Hispanic</option>
-    <option value="Asian">Asian</option>
+    <option value="Other">Other</option>
+
   </select>
 </div>
 
@@ -79,8 +79,7 @@
   <div>
   	<button type="button" style="width: 200px"> Age </button>
   </div>
-  <select style="width: 200px">
-
+  <select style="width: 200px" name = "age">
     <option disabled selected value> -- select an option -- </option>
     <option value="20-30">20-30</option>
     <option value="30-40">30-40</option>
@@ -98,8 +97,7 @@
   	<button type="button" style="width: 200px">
  Gender </button>
   </div>
-  <select style="width: 200px">
-
+  <select style="width: 200px" name = "gender">
     <option disabled selected value> -- select an option -- </option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
@@ -111,13 +109,13 @@
   	<button type="button" style="width: 200px">
  Admission Type </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name="admission_type_id">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>Emergency</option>
     <option value=2>Urgent</option>
     <option value=3>Elective</option>
-    <option value=6>Unknown or N/A</option>
+    <option value=4>Unknown or N/A</option>
   </select>
 </div>
 
@@ -126,7 +124,7 @@
   	<button type="button" style="width: 200px">
  Discharge Type </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "discharge_disposition_id">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>Discharged to Home</option>
@@ -140,7 +138,7 @@
   	<button type="button" style="width: 200px">
  Admission Source ID </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "admission_source_id">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>Referral</option>
@@ -155,7 +153,7 @@
   	<button type="button" style="width: 200px">
  Days Spent in Hospital</button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "time_in_hospital">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>1-2</option>
@@ -169,7 +167,7 @@
   	<button type="button" style="width: 200px">
  HgA1C </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "A1Cresult">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>None</option>
@@ -184,7 +182,7 @@
   	<button type="button" style="width: 200px">
  Insulin </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px"  name = "insulin">
 
     <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
@@ -199,7 +197,7 @@
   	<button type="button" style="width: 200px">
  Glyburide </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "glyburide">
 
     <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
@@ -214,7 +212,7 @@
   	<button type="button" style="width: 200px">
  Glipizide </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "glipizide">
 
     <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
@@ -227,9 +225,9 @@
 <div class="dropdown" id="param12">
   <div>
   	<button type="button" style="width: 200px">
- Metaformin </button>
+ Metformin </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "metformin">
 
     <option disabled selected value> -- select an option -- </option>
     <option value="No">No</option>
@@ -244,7 +242,7 @@
   	<button type="button" style="width: 200px">
  Medication Change </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "change">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=0>0</option>
@@ -257,7 +255,7 @@
   	<button type="button" style="width: 200px">
  Prescribed Diabetes Medication? </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name ="diabetesMed">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=0>0</option>
@@ -266,26 +264,14 @@
 </div>
 
 
+
+
 <div class="dropdown" id="param15">
-  <div>
-  	<button type="button" style="width: 200px">
- Time to readmission </button>
-  </div>
-  <select style="width: 200px">
-
-    <option disabled selected value> -- select an option -- </option>
-    <option value="NO">Not readmitted</option>
-    <option value="<30">More than 30 days</option>
-    <option value=">30">30 days or less</option>
-  </select>
-</div>
-
-<div class="dropdown" id="param16">
   <div>
   	<button type="button" style="width: 200px">
  Primary diagnosis </button>
   </div>
-  <select style="width: 200px">
+  <select style="width: 200px" name = "diag_1">
 
     <option disabled selected value> -- select an option -- </option>
     <option value=1>1</option>
@@ -297,7 +283,7 @@
 <br>
 <br>
 
-<div class="dropdown" id="param17">
+<div class="dropdown" id="param16">
   <input type="submit" value="Submit">
 </div>
 
